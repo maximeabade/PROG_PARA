@@ -98,12 +98,18 @@ Smax = Told / Tnew = 1000 / (0.3*1000) = 3.33
 <img src = "./img/graph2.png"></img>
 
 ## 15.
-### EQUATION DE HANDALL avec perte de 5 secondes par processus ajoutés
+### EQUATION DE Amdahl avec perte de 5 secondes par processus ajoutés
 S = Told / Tnew = Tsequentiel / Tparallele = 1000 /(0.3x1000 + 700/p + 5x(p-1)) 
 
 Tnew = 5p² + 295p + 700
 
 <img src="./img/graph3.png"></img>
 
-## 16.
+## 17.
+
+S = (1-Fp) + S*Fp = 1 + (S-1) * Fp
+
+<p style="text-decoration: underline">FractionSéquentielle Fs = 0.05<p>
+FractionParallèle Fp = 0.95
+
 
