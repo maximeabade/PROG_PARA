@@ -96,3 +96,11 @@ S = 1/(0.3 + 0.7/p) ==> Smax = Lim(p->inf) 1/(0.3 + 0.7/p) = 1/0.3 = 3.33
 Smax = Told / Tnew = 1000 / (0.3*1000) = 3.33
 
 <img src = "graph2.png"></img>
+
+## 15.
+### EQUATION DE HANDALL avec perte de 5 secondes par processus ajoutés
+S = Told / Tnew = Tsequentiel / Tparallele = 1000 /(0.3x1000 + 700/p + 5x(p-1)) 
+
+Tnew = 5p² + 295p + 700
+
+<img src="graph3.png"></img>
