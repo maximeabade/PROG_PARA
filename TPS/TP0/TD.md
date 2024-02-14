@@ -89,3 +89,10 @@ Efficacité = S/p = 2.70/4 = 0.675 = 67.5%
     4Cores  -> 1000/2.70 = 370.37€ par amélioration
     12Cores -> 2500/4.35 = 574.71€ par amélioration
     24Cores -> 6000/5.13 = 1169.59€ par amélioration
+
+## 14. Calcul du speedup maximum possible
+S = 1/(0.3 + 0.7/p) ==> Smax = Lim(p->inf) 1/(0.3 + 0.7/p) = 1/0.3 = 3.33
+
+Smax = Told / Tnew = 1000 / (0.3*1000) = 3.33
+
+<img src = "graph2.png"></img>
