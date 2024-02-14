@@ -66,7 +66,7 @@ S = Told / Tnew = 1 / (Fs + Fp/s) = 1 / (0.2 + 0.1/4) = 2.5
 S = Told / Tnew = 1 / (Fs + Fp/s) = 1 / (0.1 + 0.9/4) = 3.08
 
 ## 10.
-S = 1 / ((0.2 + 0.8/4)*0.6 + 0.4)    le 60% vient de l énoncé
+S = 1 / ((0.2 + 0.8/4)*0.6 + 0.4)    le 60% vient de l énoncé <br>
         PREMIER PROCESSUS    2ND PROCESSUS NON PARALLELISÉ                                  
 ## 11.
 S = 1 / (( (0.2 + 0.8/4)*0.6 + (0.1 + 0.9/4)*0.4))  = 2.70
