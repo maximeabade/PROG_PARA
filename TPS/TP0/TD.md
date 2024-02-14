@@ -109,7 +109,14 @@ Tnew = 5p² + 295p + 700
 
 S = (1-Fp) + S*Fp = 1 + (S-1) * Fp
 
-<p style="text-decoration: underline">FractionSéquentielle Fs = 0.05<p>
+FractionSéquentielle Fs = 0.05
 FractionParallèle Fp = 0.95
 
+S10 = 1 + (10-1) * 0.95 = 9.55
+S14 = 1 + (14-1) * 0.95 = 13.35
+
+P = 10 -> W(charge de travail) = W * Fs + W * Fp = W(0.05 + 0.95)
+P = 14 -> W' = WxFs = W * Fp * DeltaP= W(0.05 + 0.95(14-10))
+
+W'/W = (0.05 + 0.95*4) / (0.05 + 0.95) = 3.85
 
