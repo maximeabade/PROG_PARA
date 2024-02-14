@@ -76,9 +76,11 @@ S = 1 / (( (0.2 + 0.8/4)*0.6 + (0.1 + 0.9/4)*0.4))  = 2.70 <br>
 Efficacité = S/p = 2.70/4 = 0.675 = 67.5%
 
 
-## 12.
+## 12. On ignore la consigne, on suppose que les deux processus sont parallelisés
 
 ### 12 CORES: 
     S = 4.35 <br> Efficacité = 4.35/12 = 0.3625 = 36%
 ### 24 CORES:
     S = 5.13 <br> Efficacité = 5.13/24 = 0.21375 = 21%
+
+<img src="graph.png"></img>
