@@ -84,3 +84,8 @@ Efficacité = S/p = 2.70/4 = 0.675 = 67.5%
     S = 5.13 ; Efficacité = 5.13/24 = 0.21375 = 21%
 
 <img src="graph.png"></img>
+
+## 13.
+    4Cores  -> 1000/2.70 = 370.37€ par amélioration
+    12Cores -> 2500/4.35 = 574.71€ par amélioration
+    24Cores -> 6000/5.13 = 1169.59€ par amélioration
