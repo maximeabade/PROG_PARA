@@ -83,7 +83,7 @@ Efficacité = S/p = 2.70/4 = 0.675 = 67.5%
 ### 24 CORES:
     S = 5.13 ; Efficacité = 5.13/24 = 0.21375 = 21%
 
-<img src="graph.png"></img>
+<img src="./img/graph.png"></img>
 
 ## 13.
     4Cores  -> 1000/2.70 = 370.37€ par amélioration
@@ -95,7 +95,7 @@ S = 1/(0.3 + 0.7/p) ==> Smax = Lim(p->inf) 1/(0.3 + 0.7/p) = 1/0.3 = 3.33
 
 Smax = Told / Tnew = 1000 / (0.3*1000) = 3.33
 
-<img src = "graph2.png"></img>
+<img src = "./img/graph2.png"></img>
 
 ## 15.
 ### EQUATION DE HANDALL avec perte de 5 secondes par processus ajoutés
@@ -103,4 +103,7 @@ S = Told / Tnew = Tsequentiel / Tparallele = 1000 /(0.3x1000 + 700/p + 5x(p-1))
 
 Tnew = 5p² + 295p + 700
 
-<img src="graph3.png"></img>
+<img src="./img/graph3.png"></img>
+
+## 16.
+
