@@ -69,8 +69,8 @@ S = Told / Tnew = 1 / (Fs + Fp/s) = 1 / (0.1 + 0.9/4) = 3.08
 S = 1 / ((0.2 + 0.8/4)*0.6 + 0.4)    le 60% vient de l énoncé <br>
         PREMIER PROCESSUS    2ND PROCESSUS NON PARALLELISÉ                                  
 ## 11.
-S = 1 / (( (0.2 + 0.8/4)*0.6 + (0.1 + 0.9/4)*0.4))  = 2.70
-        PREMIER PROCESSUS   2ND PROCESSUS PARALLELISÉ
+S = 1 / (( (0.2 + 0.8/4)*0.6 + (0.1 + 0.9/4)*0.4))  = 2.70 <br>
+        PREMIER PROCESSUS   2ND PROCESSUS PARALLELISÉ <br>
         60% des ressources  40% des ressources
 
 Efficacité = S/p = 2.70/4 = 0.675
