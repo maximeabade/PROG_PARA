@@ -73,9 +73,12 @@ S = 1 / (( (0.2 + 0.8/4)*0.6 + (0.1 + 0.9/4)*0.4))  = 2.70 <br>
         PREMIER PROCESSUS   2ND PROCESSUS PARALLELISÉ <br>
         60% des ressources  40% des ressources
 
-Efficacité = S/p = 2.70/4 = 0.675
+Efficacité = S/p = 2.70/4 = 0.675 = 67.5%
 
 
 ## 12.
 
-
+### 12 CORES: 
+    S = 4.35 <br> Efficacité = 4.35/12 = 0.3625 = 36%
+### 24 CORES:
+    S = 5.13 <br> Efficacité = 5.13/24 = 0.21375 = 21%
