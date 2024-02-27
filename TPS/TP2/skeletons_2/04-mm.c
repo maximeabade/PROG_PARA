@@ -24,8 +24,8 @@ int main(int argc, char **argv)
 	nth = 4;
 
 	M = 1000;
-	N = 500;
-	P = 750;
+	N = 1000;
+	P = 1000;
 
 	aval = 3.0;
 	bval = 2.0;
@@ -84,7 +84,7 @@ int main(int argc, char **argv)
 			for(i = 0; i < M; i++){
 				for(j = 0; j < P; j++){
 					tmp = 0.0;
-					printf("i : %ld, j : %ld\n", i, j);
+					//printf("i : %ld, j : %ld\n", i, j);
 					for(k = 0; k < N; k++){
 						tmp += A[i][k] * B[k][j];
 					}
@@ -103,7 +103,7 @@ int main(int argc, char **argv)
        	  for (j=0; j<P; j++){
 	    err = C[i][j] - cval; 
 	    errsq += err * err;
-	   // printf("C[%ld][%ld] = %lf\n",i,j,C[i][j]);
+	    printf("C[%ld][%ld] = %lf\n",i,j,C[i][j]);
 	  }
 	
 	if (errsq > TOL) 
@@ -122,3 +122,6 @@ double randomFloat()
     random_value = (double)rand()/RAND_MAX;
     return random_value;
 }
+
+
+//lets try to upgrade the print of the matrix 
