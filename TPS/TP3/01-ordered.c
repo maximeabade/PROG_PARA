@@ -26,7 +26,7 @@ int main () {
   #pragma omp for ordered
   for (i=1; i<SIZE; i++)
   {
-    /* More code here... */
+   
 
     #pragma omp ordered
     {
