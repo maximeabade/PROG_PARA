@@ -156,6 +156,7 @@ numworkers = numtasks-1;
 	   offset,
 	   number of rows
       */ 
+	   
 
       
        // Allocate space for the chunk of a received and for the whole b matrix
