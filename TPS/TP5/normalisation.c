@@ -9,7 +9,7 @@ int main(int argc, char** argv) {
     MPI_Comm_size(MPI_COMM_WORLD, &size);
 
     // Taille du vecteur
-    int N = 10;
+    int N = 50;
 
     // Déclaration des variables
     float* v = malloc(N * sizeof(float));
