@@ -1,57 +1,60 @@
 #include <mpi.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h> 
+
+#define N 4
 
 void printMatrix(int *matrix, int rows, int cols);
 void matrixMultiplication(int *matrixA, int *matrixB, int *matrixC, int rows, int cols);
 
 int main(int argc, char *argv[]) {
     int myid, np, i, j;
-    int N = 15; // Taille des matrices
     int matrixA[N][N], matrixB[N][N], matrixC[N][N];
 
     MPI_Init(&argc, &argv);
     MPI_Comm_rank(MPI_COMM_WORLD, &myid);
     MPI_Comm_size(MPI_COMM_WORLD, &np);
 
-    // Initialiser la matrice B dans le processus 0
+    srand(time(NULL) + myid); // Seed le générateur de nombres aléatoires avec une valeur différente pour chaque processus
+
     if (myid == 0) {
+        // Initialisation de la matrice A
+        printf("Matrice A initialisée :\n");
         for (i = 0; i < N; i++) {
             for (j = 0; j < N; j++) {
-                matrixB[i][j] = 1;
+                matrixA[i][j] = rand() % 11; // Nombres aléatoires entre 0 et 10 inclus
+                printf("%d ", matrixA[i][j]);
             }
+            printf("\n");
+        }
+
+        // Initialisation de la matrice B
+        printf("Matrice B initialisée :\n");
+        for (i = 0; i < N; i++) {
+            for (j = 0; j < N; j++) {
+                matrixB[i][j] = rand() % 11; // Nombres aléatoires entre 0 et 10 inclus
+                printf("%d ", matrixB[i][j]);
+            }
+            printf("\n");
         }
     }
 
-    // Diffuser la matrice B à tous les processus
+    // Diffusion de la matrice B à tous les processus
     MPI_Bcast(matrixB, N * N, MPI_INT, 0, MPI_COMM_WORLD);
 
-    // Initialiser la matrice A dans le processus 0
-    if (myid == 0) {
-        for (i = 0; i < N; i++) {
-            for (j = 0; j < N; j++) {
-                matrixA[i][j] = i * N + j; // Exemple d'initialisation, à remplacer par votre logique
-            }
-        }
-    }
-
-    // Répartir la matrice A par tranches de lignes
     int rows_per_proc = N / np;
     int *localA = (int *)malloc(rows_per_proc * N * sizeof(int));
     MPI_Scatter(matrixA, rows_per_proc * N, MPI_INT, localA, rows_per_proc * N, MPI_INT, 0, MPI_COMM_WORLD);
 
-    // Allouer la mémoire pour la matrice C locale
     int *localC = (int *)malloc(rows_per_proc * N * sizeof(int));
 
-    // Effectuer la multiplication matricielle
     matrixMultiplication(localA, matrixB, localC, rows_per_proc, N);
 
-    // Rassembler les résultats de tous les processus
     MPI_Gather(localC, rows_per_proc * N, MPI_INT, matrixC, rows_per_proc * N, MPI_INT, 0, MPI_COMM_WORLD);
 
-    // Afficher la matrice résultante
     if (myid == 0) {
-        printf("Matrice résultante:\n");
+        printf("Matrice résultante :\n");
         printMatrix(matrixC, N, N);
     }
 
